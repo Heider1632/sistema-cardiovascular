@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SISTEMA CARDIOVASCULAR</title>
+	<!-- Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<!-- estilos personalizados-->
+	<link rel="stylesheet" type="text/css" href="../estilos/estilos-inicio.css">
+</head>
+<body class="text-center">
+
+    <div class="d-flex w-500 h-100 p-3 mx-auto flex-column">
+      <header class="masthead">
+        <div class="inner">
+          <h3 class="masthead-brand">SISTEMA CARDIOVASCULAR</h3>
+          <nav class="nav nav-masthead justify-content-center">
+          	<a class="nav-link active" href="../index.html">Presentacion</a>
+            <a class="nav-link" href="../contenido/indice.html">Indice</a>
+            <a class="nav-link" href="../contenido/bibliografia.html">Bibliografias</a>
+            <a class="nav-link" href="../contenido/agradecimientos.html">Agradecimientos</a>
+          </nav>
+        </div>
+      </header>
+<main>
+      	<h1 class="cover-heading">Presentación</h1>
+        <a class="btn btn-primary" @click="mostrarIntroduccion()">Introducción</a>
+        <a class="btn btn-primary" @click="mostrarObjetivos()">Objetivos</a>
+
+        <div v-show="mostrar" class="img-center" style="background-image: url('../img/giphy.gif')"></div>
+
+      	<div class="container">
+		    <div class="row">
+
+        <template v-if="introduccion == true">
+          <div class="col-md-6">
+            <p class="lead" align="justify"><b>El sistema circulatorio está formado por el sistema cardiovascular: el corazón y los conductos por los que circula la sangre, y por el sistema linfático: conductos, estructuras y órganos por donde circula la linfa. El sistema cardiovascular conduce a la sangre y está formado por arterias, venas, capilares y por el corazón. El sistema linfático es más heterogéneo y está formado por los vasos linfáticos, por los ganglios linfáticos, además de por órganos tales como el bazo y el timo.
+            Se encarga de encauzar y propulsar la sangre para que irrigue todo el cuerpo. La sangre es esencial como transportador de alimentos, productos de desecho, oxígeno, dióxido de carbono, hormonas, células del sistema inmune, etcétera. Pero también tiene otras funciones como por ejemplo regular la temperatura corporal.
+            El sistema cardiovascular tiene un doble circuito, uno que irriga los pulmones y otro que irriga el resto del cuerpo. Ambos tienen su origen y fin en el corazón, el órgano que se encarga de mantener a la sangre en constate movimiento. Los vasos sanguíneos por los que circula la sangre presentan el mismo patrón en ambos circuitos: corazón, arterias, arteriolas, red de capilares, vénulas, venas y corazón. En algunas ocasiones una arteriola o una vénula pueden estar entre dos redes capilares, formando lo que se denominan sistemas porta, como los del digestivo e hígado.</b>
+            </p>
+          </div>
+          <div class="col-md-6">
+          <p class="lead" align="justify"><b>Tanto arterias como venas están formadas por tres capas o túnicas: túnica íntima, túnica media y túnica adventicia. La túnica íntima es la más interna, más próxima a la sangre, y está formada por un epitelio simple plano (endotelio), una lámina basal y una capa de tejido conectivo laxo. La túnica media está formada sobre todo por fibras de músculo liso. La túnica adventicia es la capa más externa y está formada por tejido conectivo. Las arterias y las arteriolas tienen las paredes más gruesas que las venas y vénulas ya que tienen que soportar mayor presión sanguínea por estar más cerca del corazón. Las arterias suelen tener menor diámetro que las venas, lo que junto con el mayor grosor de sus paredes les da un aspecto más redondeado, es decir, el contorno de las venas es más irregular que el de las arterias.
+          Las arterias y venas grandes contienen a su vez vasos sanguíneos que irrigan sus paredes. A este conjunto de vasos se les denomina "vasa vasorum" (vasos de los vasos). Esta red es más externa en las arterias, mientras que puede encontrarse más próxima a la luz en las venas. Las arterias son más sensibles a enfermedades que las venas porque sus capas musculares más próximas a la luz están relativamente alejadas del riego sanguíneo. Tanto en las paredes de las arterias como de las venas hay terminaciones nerviosas que controlan la dilatación y contracción de su musculatura.</b>
+          </p>
+          <button type="button" class="close" @click="cerrarIntro()">Cerrar</button>
+          </div>
+      </template>
+
+      <template v-if="objetivos == true">
+        <div class="col-md-6">
+            <h5 align="text-center">OBJETIVO.</h5>
+            <ol>
+              <li>Explicar las características de las arterias, venas y capilares como órganos tubulares.</li>
+              <li>Describir las funciones de las arterias, venas y capilares. </li>
+              <li>Presentar la importancia y vitalidad en el ser humano de las arterias, venas y capilares.</li>
+            </ol>
+        </div>
+        <div class="col-md-6">
+          <div class="img-gif" style="background-image: url('../img/check.gif')"></div>
+          <button type="button" class="close" @click="cerrarObj()">Cerrar</button>
+        </div>
+      </template>
+
+        </div> 
+      </div>
+    </main>
+    </div>
+
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p></p>
+        </div>
+      </footer>
+    </div>
+
+	
+</body>
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- Vue. js-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- Instancia Vue-->
+<script type="text/javascript" src="../main.js"></script>
+</html>
